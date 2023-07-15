@@ -1,0 +1,1375 @@
+
+
+<!DOCTYPE html>  
+<html>  
+<head>  
+    <title>Calculadora de Riesgo Cardiovascular</title>
+    <style>
+        body {text-align: center;
+            font-family: Arial, Helvetica, sans-serif;}
+            h1 {
+                color: red;
+            }
+    </style>
+    <script>  
+        function enviarFormulario() {  
+            var registro = document.getElementById("registro").value;  
+            var edad = document.getElementById("edad").options[document.getElementById("edad").selectedIndex].value;  
+            var genero = document.getElementById("genero").options[document.getElementById("genero").selectedIndex].value;  
+            var diabetes = document.getElementById("diabetes").checked;  
+            var fuma = document.getElementById("fuma").checked;  
+            var altura = document.getElementById("altura").value;  
+            var peso = document.getElementById("peso").value;  
+            var presion = document.getElementById("presion").options[document.getElementById("presion").selectedIndex].value;  
+            var alturaMetros = altura / 100;  
+            var imc = peso / (alturaMetros * alturaMetros);  
+            var porcentajeRiesgo = 0.0;  
+             if(genero == "femenino" && fuma == false && edad == "40-44" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 1; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 1;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 1;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 2;
+                }
+            } 
+            if(genero == "femenino" && fuma == false && edad == "40-44" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 2; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 2;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 2;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 3;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "40-44" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 2; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 3;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 3;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 4;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "40-44" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 3; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 6;
+                }
+                
+            }
+            if(genero == "femenino" && fuma == false && edad == "45-49" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 2; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 2;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 2;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 3;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "45-49" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 2; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 3;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 3;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 4;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "45-49" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 3; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 5;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "45-49" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 5; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 8;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "50-54" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 2; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 3;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 3;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 4;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "50-54" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 3; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 5;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "50-54" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 5; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 7;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "50-54" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 10;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "55-59" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 3; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 5;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "55-59" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 5; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 7;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "55-59" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 10;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "55-59" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 9; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 14;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "60-64" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 5; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 8;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "60-64" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 10;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "60-64" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 14;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "60-64" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 17;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 19;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "65-69" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 8; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 10;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 11;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "65-69" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 11; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 15;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "65-69" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 17;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 19;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "65-69" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 19; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 23;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 25;
+                }
+            }
+            if(genero == "femenino" && fuma == false && edad == "70+" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 12; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 14;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 15;
+                }
+            } 
+            if(genero == "femenino" && fuma == false && edad == "70+" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 15; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 17;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 18;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 20;
+                }
+            } 
+            if(genero == "femenino" && fuma == false && edad == "70+" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 20; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 23;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 25;
+                }
+            } 
+            if(genero == "femenino" && fuma == false && edad == "70+" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 25; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 27;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 30;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 32;
+                }
+            } 
+            if(genero == "femenino" && fuma == true && edad == "40-44" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 3; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 5;
+                }
+            } 
+            if(genero == "femenino" && fuma == true && edad == "40-44" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 5; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 8;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "40-44" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 10;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 12;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "40-44" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 14;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 17;
+                }
+                
+            }
+            if(genero == "femenino" && fuma == true && edad == "45-49" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 4; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 7;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "45-49" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 6; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 10;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "45-49" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 9; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 10;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 14;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "45-49" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 13; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 17;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 20;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "50-54" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 6; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 9;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "50-54" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 8; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 12;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "50-54" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 11; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 17;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "50-54" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 16; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 19;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 14;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "55-59" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 10;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 11;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "55-59" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 15;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "55-59" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 18;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 21;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "55-59" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 20; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 2;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 25;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 28;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "60-64" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 11; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 15;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "60-64" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 18;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 20;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "60-64" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 19; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 24;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 26;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "60-64" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 26; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 28;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 31;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 35;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "65-69" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 17;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 19;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "65-69" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 19; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 23;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 25;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "65-69" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 25; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 27;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 29;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 32;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "65-69" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 32; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 35;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 38;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 41;
+                }
+            }
+            if(genero == "femenino" && fuma == true && edad == "70+" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 18; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 20;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 22;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 24;
+                }
+            } 
+            if(genero == "femenino" && fuma == true && edad == "70+" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 24; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 26;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 28;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 30;
+                }
+            } 
+            if(genero == "femenino" && fuma == true && edad == "70+" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 30; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 33;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 35;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 38;
+                }
+            } 
+            if(genero == "femenino" && fuma == true && edad == "70+" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 38; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 41;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 44;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 47;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "40-44" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 2; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 2;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 3;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 4;
+                }
+            } 
+            if(genero == "masculino" && fuma == false && edad == "40-44" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 3; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 5;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "40-44" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 5; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 8;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "40-44" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 10;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 12;
+                }
+                
+            }
+            if(genero == "masculino" && fuma == false && edad == "45-49" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 3; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 4;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 5;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "45-49" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 5; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 7;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "45-49" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo =11;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "45-49" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 15;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "50-54" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 4; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 6;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "50-54" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 6; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 9;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "50-54" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 8; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 10;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 13;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "50-54" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 12; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 14;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 18;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "55-59" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 5; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 8;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "55-59" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 11;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "55-59" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 15;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "55-59" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 18;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 20;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "60-64" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 10;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "60-64" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 9; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 13;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "60-64" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 13; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 14;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 18;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "60-64" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 17; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 19;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 24;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "65-69" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 13;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "65-69" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 13; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 18;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "65-69" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 18; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 19;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 23;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "65-69" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 23; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 25;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 28;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 30;
+                }
+            }
+            if(genero == "masculino" && fuma == false && edad == "70+" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 18;
+                }
+            } 
+            if(genero == "masculino" && fuma == false && edad == "70+" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 18; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 19;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 23;
+                }
+            } 
+            if(genero == "masculino" && fuma == false && edad == "70+" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 23; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 25;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 27;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 29;
+                }
+            } 
+            if(genero == "masculino" && fuma == false && edad == "70+" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 29; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 32;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 34;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 37;
+                }
+            } 
+            if(genero == "masculino" && fuma == true && edad == "40-44" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 4; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 5;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 6;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 8;
+                }
+            } 
+            if(genero == "masculino" && fuma == true && edad == "40-44" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 11;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "40-44" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 14;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 16;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "40-44" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 17;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 20;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 23;
+                }
+                
+            }
+            if(genero == "masculino" && fuma == true && edad == "45-49" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 6; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 7;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 10;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "45-49" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 9; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 10;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 14;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "45-49" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 13; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 17;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 20;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "45-49" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 18; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 21;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 24;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 28;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "50-54" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 7; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 8;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 10;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 11;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "50-54" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 16;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "50-54" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 14; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 19;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 22;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "50-54" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 20; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 23;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 26;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 30;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "55-59" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 8; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 9;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 12;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "55-59" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 11; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 13;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 17;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "55-59" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 16; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 18;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 20;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 23;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "55-59" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 21; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 24;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 27;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 31;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "60-64" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 10; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 11;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 12;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 14;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "60-64" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 13; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 16;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 18;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "60-64" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 18; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 20;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 22;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 24;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "60-64" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 24; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 26;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 29;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 32;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "65-69" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 13; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 14;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 15;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 17;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "65-69" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 17; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 18;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 20;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 22;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "65-69" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 22; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 24;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 26;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 29;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "65-69" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 28; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 31;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 34;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 37;
+                }
+            }
+            if(genero == "masculino" && fuma == true && edad == "70+" && presion == "120") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 16; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 17;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 19;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 20;
+                }
+            } 
+            if(genero == "masculino" && fuma == true && edad == "70+" && presion == "140") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 20; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 22;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 24;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 26;
+                }
+            } 
+            if(genero == "masculino" && fuma == true && edad == "70+" && presion == "160") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 26; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 28;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 30;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 33;
+                }
+            } 
+            if(genero == "masculino" && fuma == true && edad == "70+" && presion == "180") { 
+                if (imc < 24.9) {
+                    porcentajeRiesgo = 33; 
+                } else if (imc >= 25 && imc <= 29.9) {
+                    porcentajeRiesgo = 36;
+                } else if (imc >= 30 && imc <= 34.9) {
+                    porcentajeRiesgo = 38;
+                } else if (imc >= 35) {
+                    porcentajeRiesgo = 41;
+                }
+            } 
+             var datos = {  
+                registro: registro,  
+                edad: edad,  
+                genero: genero,  
+                diabetes: diabetes,  
+                fuma: fuma,  
+                altura: altura,  
+                peso: peso,  
+                presion: presion,  
+                imc: imc,  
+                porcentajeRiesgo: porcentajeRiesgo  
+            };  
+             alert("Datos enviados:\n" +  
+                "Registro: " + datos.registro + "\n" +  
+                "Edad: " + datos.edad + "\n" +  
+                "Género: " + datos.genero + "\n" +  
+                "¿Padece diabetes?: " + datos.diabetes + "\n" +  
+                "¿Fuma?: " + datos.fuma + "\n" +  
+                "Altura: " + datos.altura + " cm\n" +  
+                "Peso: " + datos.peso + " kg\n" +  
+                "Presión arterial sistólica: " + datos.presion + "\n" +  
+                "Índice de masa corporal (IMC): " + datos.imc.toFixed(2) + "\n" +  
+                "Porcentaje de riesgo final: " + datos.porcentajeRiesgo + "%");  
+        // Enviar los datos a través de una solicitud HTTP (fetch) a la API de Sheet.best
+        fetch('https://sheet.best/api/sheets/2183b6bb-288f-409c-8f65-aef655ff77be', {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    "Registro": registro,
+                    "Edad": edad,
+                    "Genero": genero,
+                    "Diabetes": diabetes,
+                    "Fuma": fuma,
+                    "Altura": altura,
+                    "Peso": peso,
+                    "Presion": presion,
+                    "IMC": imc,
+                    "PorcentajeRiesgo": porcentajeRiesgo
+                })
+            }).then(response => {
+                // Aquí puedes manejar la respuesta de la solicitud si es necesario
+                console.log("Datos enviados exitosamente");
+            }).catch(error => {
+                // Aquí puedes manejar el error en caso de que la solicitud falle
+                console.error("Error al enviar los datos:", error);
+            });
+
+            // Mostrar los resultados en el navegador
+            var resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.textContent = "Su porcentaje de riesgo cardiovascular es del " + porcentajeRiesgo + "%.";
+        }
+    </script>  
+</head>   
+<body style="text-align:center;">   
+    <h1>Instituto Nacional de Ciencias Medicas y Nutricion Salvador Zubiran</h1>   
+    <br>
+    <h2>Calculadora de Riesgo Cardiovacular</h2>
+    <form style="margin:auto;">   
+        <label for="registro">Registro:</label>   
+        <input type="text" id="registro" name="registro"><br>   
+        <br>
+        <label for="edad">Edad:</label>   
+        <select id="edad" name="edad">   
+            <option value="40-44">40-44</option>   
+            <option value="45-49">45-49</option>   
+            <option value="50-54">50-54</option>   
+            <option value="55-59">55-59</option>   
+            <option value="60-64">60-64</option>   
+            <option value="65-69">65-69</option>   
+            <option value="70+">70+</option>   
+        </select><br>   
+        <br>
+        <label for="genero">Género:</label>   
+        <select id="genero" name="genero">   
+            <option value="masculino">Masculino</option>   
+            <option value="femenino">Femenino</option>   
+        </select><br>   
+        <br>
+        <label for="diabetes">¿Padece diabetes?</label><br>   
+        <input type="checkbox" id="diabetes" name="diabetes" value="si"> Sí<br>   
+        <input type="checkbox" id="diabetes" name="diabetes" value="no"> No<br>   
+        <br>
+        <label for="fuma">¿Fuma?</label><br>   
+        <input type="checkbox" id="fuma" name="fuma" value="si"> Sí<br>   
+        <input type="checkbox" id="fuma" name="fuma" value="no"> No<br>   
+        <br>
+        <label for="altura">Altura (cm):</label>   
+        <input type="text" id="altura" name="altura"><br>   
+        <br>
+        <label for="peso">Peso (kg):</label>   
+        <input type="text" id="peso" name="peso"><br>   
+        <br>
+        <label for="presion">Presión arterial sistólica:</label>   
+        <select id="presion" name="presion">   
+            <option value="120">120</option>   
+            <option value="140">140</option>   
+            <option value="160">160</option>   
+            <option value="180">180</option>   
+        </select><br>   
+        <br>
+        <button type="button" onclick="enviarFormulario()">Enviar</button>   
+<style>
+    button {
+        font-size: 20px;
+        color: blue;
+    }
+</style>
+    </form>   
+</body>   
+</html>
